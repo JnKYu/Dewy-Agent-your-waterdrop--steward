@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:waterdrop agent}",
+            "name": "Debug Dewy",
+            "target": "Dewy",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Dewy"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:waterdrop agent}",
+            "name": "Release Dewy",
+            "target": "Dewy",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Dewy"
+        }
+    ]
+}

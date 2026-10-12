@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc" data-state="idle">
+  <title id="title">蓝色水珠管家</title>
+  <desc id="desc">透明圆形水珠，蓝色渐变玻璃质感外缘，随状态轻柔舒缩。</desc>
+  <defs>
+    <radialGradient id="glass" cx="50%" cy="50%" r="53%">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".77" stop-color="#91c9e7" stop-opacity=".025"/>
+      <stop offset=".85" stop-color="#5ca8d1" stop-opacity=".09"/>
+      <stop offset=".92" stop-color="#397fae" stop-opacity=".23"/>
+      <stop offset=".97" stop-color="#b9e8f8" stop-opacity=".37"/>
+      <stop offset="1" stop-color="#f7fdff" stop-opacity=".48"/>
+    </radialGradient>
+    <radialGradient id="inner-refraction" cx="43%" cy="39%" r="68%">
+      <stop offset="0" stop-color="#c8edfb" stop-opacity=".055"/>
+      <stop offset=".48" stop-color="#9ed5ef" stop-opacity=".026"/>
+      <stop offset="1" stop-color="#8fc9e8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="specular" cx="42%" cy="38%" r="65%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".62"/>
+      <stop offset=".38" stop-color="#f8fdff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="edge-mask-gradient" gradientUnits="userSpaceOnUse" cx="128" cy="128" r="105">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".83" stop-color="#fff" stop-opacity=".68"/>
+      <stop offset=".94" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".72"/>
+    </radialGradient>
+    <mask id="edge-light-mask" maskUnits="userSpaceOnUse" x="20" y="20" width="216" height="216">
+      <circle cx="128" cy="128" r="105" fill="url(#edge-mask-gradient)"/>
+      <!-- Dark feathered cuts make the reflected light irregular like a real curved surface. -->
+      <path d="M49 94 C63 72 77 58 95 51" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" opacity=".18"/>
+      <path d="M197 72 C211 91 216 108 216 124" fill="none" stroke="#000" stroke-width="10" stroke-linecap="round" opacity=".2"/>
+      <path d="M73 207 C91 222 108 229 126 231" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" opacity=".18"/>
+    </mask>
+    <filter id="water-light-soften" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="8" result="surface"/>
+      <feDisplacementMap in="SourceGraphic" in2="surface" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="1.35"/>
+    </filter>
+    <linearGradient id="rim" x1=".14" y1=".16" x2=".87" y2=".84">
+      <stop offset="0" stop-color="#effbff" stop-opacity=".78"/>
+      <stop offset=".2" stop-color="#aad8ef" stop-opacity=".52"/>
+      <stop offset=".42" stop-color="#428bb9" stop-opacity=".72"/>
+      <stop offset=".58" stop-color="#d8f1fb" stop-opacity=".66"/>
+      <stop offset=".79" stop-color="#3479a8" stop-opacity=".74"/>
+      <stop offset="1" stop-color="#f3fbff" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="inner-rim" x1=".15" y1=".12" x2=".8" y2=".9">
+      <stop stop-color="#fff" stop-opacity=".55"/>
+      <stop offset=".3" stop-color="#9ed2ec" stop-opacity=".12"/>
+      <stop offset=".66" stop-color="#fff" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#dff7ff" stop-opacity=".48"/>
+    </linearGradient>
+    <filter id="soft-highlight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8"/>
+    </filter>
+    <clipPath id="orb-clip"><circle cx="128" cy="128" r="105"/></clipPath>
+  </defs>
+
+  <g class="orb">
+    <circle cx="128" cy="128" r="105" fill="url(#glass)"/>
+    <g clip-path="url(#orb-clip)">
+      <!-- Very subtle internal refraction keeps the desktop visible through the water. -->
+      <circle cx="128" cy="128" r="91" fill="url(#inner-refraction)"/>
+      <ellipse cx="91" cy="80" rx="15" ry="7" transform="rotate(-38 91 80)" fill="url(#specular)" opacity=".72"/>
+      <ellipse cx="83" cy="91" rx="5" ry="2.2" transform="rotate(-38 83 91)" fill="#fff" opacity=".32"/>
+      <!-- Masked, softened light bands imitate the broken blue-white reflections in the reference. -->
+      <g mask="url(#edge-light-mask)" filter="url(#water-light-soften)" opacity=".66">
+        <path d="M45 103 C58 72 82 52 108 43 C93 61 79 73 72 93 C64 115 66 128 54 143 C47 132 43 118 45 103Z" fill="#f4fcff" opacity=".7"/>
+        <path d="M53 163 C67 185 82 197 106 208 C88 207 69 199 56 184 C48 174 44 164 43 151Z" fill="#7fc4e8" opacity=".72"/>
+        <path d="M166 43 C191 56 207 77 214 102 C201 89 193 80 181 72 C174 61 170 52 166 43Z" fill="#effaff" opacity=".66"/>
+        <path d="M204 146 C202 173 185 198 161 211 C176 192 187 173 191 154 C195 145 200 142 204 146Z" fill="#75b9df" opacity=".62"/>
+      </g>
+      <!-- A faint Fresnel edge and small specular glints. -->
+      <ellipse cx="128" cy="128" rx="101" ry="101" fill="none" stroke="url(#rim)" stroke-width="2.2" opacity=".42"/>
+      <path d="M59 83 A94 94 0 0 1 112 39" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".46" filter="url(#soft-highlight)"/>
+      <path d="M57 84 A94 94 0 0 1 105 43" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".66"/>
+      <path d="M45 145 A94 94 0 0 0 91 211" fill="none" stroke="#e8f8ff" stroke-width="1.8" stroke-linecap="round" opacity=".33"/>
+    </g>
+    <circle cx="128" cy="128" r="104" fill="none" stroke="url(#rim)" stroke-width="1.2" opacity=".68"/>
+  </g>
+
+  <style>
+    .orb {
+      transform-box: view-box;
+      transform-origin: 50% 50%;
+      animation: breathe-idle 5.2s cubic-bezier(.45,0,.55,1) infinite;
+    }
+    @keyframes breathe-idle {
+      0%, 100% { transform: scale(.985); }
+      50% { transform: scale(1.018); }
+    }
+    /* Host can switch the root data-state to idle, focus, or alert. */
+    svg[data-state="focus"] .orb { animation-name: breathe-focus; animation-duration: 7s; }
+    @keyframes breathe-focus {
+      0%, 100% { transform: scale(.995); }
+      50% { transform: scale(1.006); }
+    }
+    svg[data-state="alert"] .orb { animation-name: breathe-alert; animation-duration: 2.8s; }
+    @keyframes breathe-alert {
+      0%, 100% { transform: scale(.985); }
+      50% { transform: scale(1.025); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .orb { animation: none !important; }
+    }
+  </style>
+</svg>

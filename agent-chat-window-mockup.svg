@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">私人管家 Agent 桌面聊天框效果稿</title>
+  <desc id="desc">低饱和淡蓝色的桌面聊天框，右下角呈现透明蓝色水珠助手。</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e9f0f2"/>
+      <stop offset="1" stop-color="#d9e7e9"/>
+    </linearGradient>
+    <linearGradient id="water" x1=".2" y1=".1" x2=".8" y2=".9">
+      <stop stop-color="#e9faff" stop-opacity=".85"/>
+      <stop offset=".55" stop-color="#75b8dc" stop-opacity=".24"/>
+      <stop offset=".83" stop-color="#3984b6" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#f2fbff" stop-opacity=".8"/>
+    </linearGradient>
+    <radialGradient id="waterCore" cx="44%" cy="40%" r="68%">
+      <stop stop-color="#c8edfb" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#9ed5ef" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edgeLight" x1=".15" y1=".1" x2=".85" y2=".9">
+      <stop stop-color="#fff" stop-opacity=".68"/>
+      <stop offset=".4" stop-color="#72b7dc" stop-opacity=".12"/>
+      <stop offset=".72" stop-color="#fff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".58"/>
+    </linearGradient>
+    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#496776" flood-opacity=".16"/>
+    </filter>
+    <filter id="orbGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="orbClip"><circle cx="0" cy="0" r="42"/></clipPath>
+  </defs>
+
+  <!-- Quiet desktop backdrop -->
+  <rect width="1440" height="900" fill="url(#wall)"/>
+  <circle cx="300" cy="240" r="250" fill="#f8fbfb" opacity=".38"/>
+  <path d="M0 672 C246 624 430 722 679 684 C928 646 1160 556 1440 617 V900 H0Z" fill="#d0e0e1" opacity=".55"/>
+  <path d="M0 743 C245 698 473 780 716 735 C1000 682 1207 638 1440 692 V900 H0Z" fill="#c7d9dc" opacity=".34"/>
+  <text x="64" y="78" fill="#72848a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" letter-spacing="2">DESKTOP COMPANION · CONCEPT</text>
+  <text x="64" y="126" fill="#4e6269" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" font-weight="500">安静陪伴，也随时在场</text>
+  <text x="64" y="157" fill="#7a8d92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">悬停水滴，查看轻量对话与今日状态</text>
+
+  <!-- Chat window -->
+  <g filter="url(#panelShadow)">
+    <rect x="962" y="170" width="410" height="610" rx="24" fill="#f9fcfd" fill-opacity=".97" stroke="#fff" stroke-opacity=".9" stroke-width="1.5"/>
+    <path d="M986 170 H1348 Q1372 170 1372 194 V248 H962 V194 Q962 170 986 170Z" fill="#edf6f9"/>
+  </g>
+  <!-- header avatar -->
+  <g transform="translate(1004 210)">
+    <circle r="24" fill="#d8edf5"/>
+    <circle r="19" fill="url(#water)" stroke="url(#edgeLight)" stroke-width="1.4"/>
+    <circle r="14" fill="url(#waterCore)"/>
+    <path d="M-12 -9 A15 15 0 0 1 -2 -15" fill="none" stroke="#fff" stroke-opacity=".76" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="-7" cy="-10" rx="3.7" ry="1.8" transform="rotate(-35 -7 -10)" fill="#fff" opacity=".68"/>
+  </g>
+  <text x="1040" y="207" fill="#314b57" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="600">小水</text>
+  <circle cx="1044" cy="225" r="3" fill="#79b7a7"/>
+  <text x="1053" y="229" fill="#7a9098" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">在这里，陪你慢慢来</text>
+  <g transform="translate(1320 210)" fill="#77909a">
+    <circle cx="-8" r="1.7"/><circle cx="0" r="1.7"/><circle cx="8" r="1.7"/>
+  </g>
+  <path d="M962 248 H1372" stroke="#e2edf0"/>
+
+  <!-- date and greeting -->
+  <text x="994" y="282" fill="#93a5aa" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" letter-spacing="1.2">10月8日 · 星期四</text>
+  <text x="994" y="320" fill="#334f5a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="600">早上好，今天也一起稳稳地来。</text>
+  <text x="994" y="345" fill="#71868e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">先从最重要的一件事开始，其他的我们一步步安排。</text>
+
+  <!-- Today plan -->
+  <rect x="994" y="371" width="346" height="153" rx="14" fill="#f0f7fa"/>
+  <text x="1012" y="398" fill="#48616c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600">今天的安排</text>
+  <text x="1322" y="398" text-anchor="end" fill="#7394a2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">查看全部  ›</text>
+  <circle cx="1018" cy="425" r="4" fill="#77aeca"/>
+  <text x="1032" y="429" fill="#637981" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">09:30</text>
+  <text x="1082" y="429" fill="#405a64" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">完成方案初稿</text>
+  <rect x="1260" y="414" width="58" height="21" rx="10.5" fill="#e1eff4"/>
+  <text x="1289" y="428" text-anchor="middle" fill="#63899a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="10">待开始</text>
+  <circle cx="1018" cy="462" r="4" fill="#c2d5dc"/>
+  <text x="1032" y="466" fill="#637981" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">14:00</text>
+  <text x="1082" y="466" fill="#405a64" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">和团队同步进度</text>
+  <circle cx="1018" cy="499" r="4" fill="#c2d5dc"/>
+  <text x="1032" y="503" fill="#637981" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">18:30</text>
+  <text x="1082" y="503" fill="#405a64" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">散步，给自己一点空档</text>
+
+  <!-- Focus strip -->
+  <rect x="994" y="541" width="346" height="62" rx="13" fill="#eaf4f7"/>
+  <circle cx="1023" cy="572" r="14" fill="#d7eaf0"/>
+  <path d="M1023 562 A10 10 0 1 1 1014 568" fill="none" stroke="#6a9cb0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M1023 566 V572 L1027 575" fill="none" stroke="#6a9cb0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1048" y="569" fill="#4b6570" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600">专注时段</text>
+  <text x="1048" y="588" fill="#80949b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">25 分钟专注 · 5 分钟休息</text>
+  <text x="1320" y="578" text-anchor="end" fill="#5b8798" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12" font-weight="600">开始 ›</text>
+
+  <!-- Water check-in -->
+  <text x="994" y="633" fill="#637b84" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">今天也记得照顾自己</text>
+  <rect x="994" y="647" width="168" height="34" rx="11" fill="#edf6f8"/>
+  <path d="M1013 657 C1010 662 1009 664 1009 667 A4 4 0 0 0 1017 667 C1017 664 1016 662 1013 657Z" fill="#83b9d0"/>
+  <text x="1026" y="669" fill="#5e7c88" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">记录喝水</text>
+  <rect x="1172" y="647" width="168" height="34" rx="11" fill="#edf6f8"/>
+  <path d="M1192 658 H1204 V670 H1192Z" fill="none" stroke="#86aab8" stroke-width="1.4"/>
+  <path d="M1195 655 H1201" stroke="#86aab8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="1212" y="669" fill="#5e7c88" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">记一条工作</text>
+
+  <!-- Composer -->
+  <path d="M962 705 H1372" stroke="#e2edf0"/>
+  <rect x="986" y="720" width="362" height="42" rx="14" fill="#fff" stroke="#dce9ed"/>
+  <text x="1003" y="746" fill="#a0afb3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12">告诉我你现在需要什么…</text>
+  <circle cx="1322" cy="741" r="14" fill="#8bb6c8"/>
+  <path d="M1317 741 H1327 M1323 737 L1327 741 L1323 745" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Floating companion at lower-right -->
+  <g transform="translate(1370 820)">
+    <circle r="47" fill="#6daecc" opacity=".13" filter="url(#orbGlow)"/>
+    <circle r="39" fill="url(#water)" stroke="url(#edgeLight)" stroke-width="2"/>
+    <g clip-path="url(#orbClip)">
+      <circle r="34" fill="url(#waterCore)"/>
+      <circle r="36" fill="none" stroke="#eaf9ff" stroke-width="3" opacity=".4"/>
+      <path d="M-28 -10 A31 31 0 0 1 -6 -33" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".64"/>
+      <path d="M-28 12 A31 31 0 0 0 -6 31" fill="none" stroke="#e9f8ff" stroke-width="2" stroke-linecap="round" opacity=".34"/>
+      <ellipse cx="-14" cy="-21" rx="5" ry="2.5" transform="rotate(-38 -14 -21)" fill="#fff" opacity=".7"/>
+    </g>
+    <circle r="39" fill="none" stroke="#fff" stroke-width="1" opacity=".55"/>
+  </g>
+  <text x="1370" y="874" text-anchor="middle" fill="#738b92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">轻轻呼吸 · 空闲</text>
+</svg>

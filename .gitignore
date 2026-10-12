@@ -1,0 +1,14 @@
+.DS_Store
+.build/
+xcuserdata/
+*.xcuserstate
+
+# 密钥
+.env
+*.pem
+*.key
+
+# 个人数据
+records.json
+chat.json
+Dewy-记录*.json
