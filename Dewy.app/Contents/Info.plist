@@ -19,11 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.1.0</string>
 	<key>CFBundleVersion</key>
-	<string>9</string>
+	<string>50</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>13.0</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Dewy 需要访问系统日历以查看、创建和修改日历事件。</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Dewy 需要访问系统日历以查看、创建和修改日历事件。</string>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSPrincipalClass</key>
